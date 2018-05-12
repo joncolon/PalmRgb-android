@@ -16,7 +16,7 @@ import javax.inject.Inject
 
 /**
  * Default Activity subscribes to abtest changes for recreate and
- * manages connection state for BrokenHungryBackground
+ * manages connection state for PalmRgbBackground
  */
 abstract class DefaultActivity : FragmentActivity() , IDefaultActivity {
 
@@ -75,7 +75,7 @@ abstract class DefaultActivity : FragmentActivity() , IDefaultActivity {
                 Pair(R.id.tab_connection_status, Runnable { showFragment(FragmentId.CONNECTION_STATUS) }),
                 Pair(R.id.tab_view_frames, Runnable { showFragment(FragmentId.VIEW_FRAMES_FRAGMENT) }),
                 Pair(R.id.tab_create_color, Runnable { showFragment(FragmentId.CREATE_COLOR) }),
-                Pair(R.id.tab_create_palette, Runnable { showFragment(FragmentId.CREATE_PALETTE) })
+                Pair(R.id.tab_create_palette, Runnable { showFragment(FragmentId.CREATE_MESSAGE) })
 
         )
 
