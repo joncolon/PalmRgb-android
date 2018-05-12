@@ -4,7 +4,7 @@ import nyc.jsjrobotics.palmrgb.dataStructures.Message
 
 
 data class MutableMessage(
-        var message: String,
+        var text: String,
         var senderId: String,
         var messageId: String,
         var timeStamp: Long
@@ -12,7 +12,7 @@ data class MutableMessage(
 
     fun immutable(): Message {
         return Message(
-                message,
+                text,
                 senderId,
                 messageId,
                 timeStamp

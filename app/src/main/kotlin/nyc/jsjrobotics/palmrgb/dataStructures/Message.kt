@@ -4,15 +4,15 @@ import nyc.jsjrobotics.palmrgb.database.MutableMessage
 
 
 data class Message constructor(
-        val message: String,
-        val senderId: String,
+        val text: String = EMPTY_MESSAGE,
+        val senderId: String = UNKNOWN_ID,
         val messageId: String = UNKNOWN_ID,
         val timeStamp: Long = System.currentTimeMillis()
 ) {
 
     fun mutable(): MutableMessage {
         return MutableMessage(
-                message,
+                text,
                 senderId,
                 messageId,
                 timeStamp
@@ -20,7 +20,8 @@ data class Message constructor(
     }
 
     companion object {
-        private val UNKNOWN_ID = "unknown_id"
+        private val UNKNOWN_ID = "not_set"
+        private val EMPTY_MESSAGE = "empty_message"
     }
 
 }
