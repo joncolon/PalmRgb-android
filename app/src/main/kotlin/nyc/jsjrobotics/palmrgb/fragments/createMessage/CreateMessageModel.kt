@@ -31,7 +31,6 @@ class CreateMessageModel @Inject constructor(private val application: Applicatio
     fun uploadMessageToFirebase(messageTitle: String) {
         messageTitle.isNotEmpty().let {
             val message = Message(messageTitle, currentUserId)
-            DEBUG("Sending message... $message")
             messageDataManager.uploadMessage(message.mutable())
         }
     }
